@@ -56,6 +56,8 @@ Value Eval::evaluate(const Eval::NNUE::Networks&    networks,
                      Eval::NNUE::AccumulatorCaches& caches,
                      int                            optimism) {
 
+    return Eval::simple_eval(pos); // not so good at complex thinking
+
     assert(!pos.checkers());
 
     bool smallNet           = use_smallnet(pos);

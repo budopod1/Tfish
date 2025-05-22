@@ -175,7 +175,9 @@ constexpr bool is_decisive(Value value) { return is_win(value) || is_loss(value)
 // In the code, we make the assumption that these values
 // are such that non_pawn_material() can be used to uniquely
 // identify the material on the board.
-constexpr Value PawnValue   = 208;
+// the individual pawns aren't valuable
+// and instead of 8 pawns, people will have to make due with maybe one or two
+constexpr Value PawnValue   = 0;
 constexpr Value KnightValue = 781;
 constexpr Value BishopValue = 825;
 constexpr Value RookValue   = 1276;

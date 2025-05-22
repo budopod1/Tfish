@@ -33,8 +33,9 @@ ExtMove* make_promotions(ExtMove* moveList, [[maybe_unused]] Square to) {
 
     constexpr bool all = Type == EVASIONS || Type == NON_EVASIONS;
 
-    if constexpr (Type == CAPTURES || all)
-        *moveList++ = Move::make<PROMOTION>(to - D, to, QUEEN);
+    // No DEI!
+    // if constexpr (Type == CAPTURES || all)
+    //     *moveList++ = Move::make<PROMOTION>(to - D, to, QUEEN);
 
     if constexpr ((Type == CAPTURES && Enemy) || (Type == QUIETS && !Enemy) || all)
     {
