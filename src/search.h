@@ -117,7 +117,8 @@ struct LimitsType {
     // Init explicitly due to broken value-initialization of non POD in MSVC
     LimitsType() {
         time[WHITE] = time[BLACK] = inc[WHITE] = inc[BLACK] = npmsec = movetime = TimePoint(0);
-        movestogo = mate = perft = infinite = depth = 0;
+        movestogo = mate = perft = infinite         = 0;
+        depth                                       = 10;
         nodes                                       = 0;
         ponderMode                                  = false;
     }
